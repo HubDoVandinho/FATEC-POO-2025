@@ -1,12 +1,5 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
 /**
- *
- * @author 0030482411017
+ * @author Evandro 0030482411017 aka Vandinho Catatau
  */
 public class Livro {
     private int identificacao;
@@ -48,3 +41,4 @@ public class Livro {
     
     
 }
+
