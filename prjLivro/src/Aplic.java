@@ -3,8 +3,7 @@ import java.util.Scanner;
 
 
 /**
- *
- * @author 0030482411017
+ * @author Evandro 0030482411017 aka Vandinho Catatau
  */
 public class Aplic {
     
@@ -78,3 +77,4 @@ public class Aplic {
     }
     
 }
+
