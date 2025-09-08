@@ -1,1 +1,54 @@
+# FATEC - Programação Orientada a Objetos (POO) - 4º Semestre
 
+Repositório destinado à disciplina de **Programação Orientada a Objetos (POO)** do 4º semestre da FATEC.  
+Aqui estão armazenados todos os projetos desenvolvidos ao longo do semestre.
+
+---
+
+## 📂 Estrutura dos Projetos
+
+Cada pasta representa um exercício ou projeto separado com sua respectiva lógica orientada a objetos.
+
+2. Abra no IDE de sua preferência:
+   - NetBeans
+   - Eclipse
+   - IntelliJ
+   - VS Code
+
+3. Cada pasta corresponde a um projeto **Java autônomo**.  
+   Para rodar, navegue até o arquivo com o método `main` (ex.: `Main.java` ou `Principal.java`) e execute.
+
+> ⚠️ Caso ocorram erros relacionados à versão do Java ou configurações de compilação, verifique as opções de **Java Build Path** ou utilize **Java 17**, conforme a versão sugerida.
+
+---
+
+## 🎯 Objetivos de Aprendizado
+
+Este repositório tem como propósito:
+
+| Objetivo                   | Descrição                                                                     |
+|----------------------------|-------------------------------------------------------------------------------|
+| Praticar princípios de POO | Classes, objetos, métodos, atributos, encapsulamento, herança e polimorfismo. |
+| Estruturar projetos Java   | Organização de pacotes, convenções de nome e estrutura de pastas.             |
+| Iteração incremental       | Aprender passo a passo, construindo sobre exemplos anteriores.                |
+| Preparação acadêmica       | Atividades alinhadas ao currículo da FATEC para reforçar entendimento.        |
+
+---
+
+## 🤝 Contribuições
+
+Este repositório é parte de um aprendizado pessoal — contribuições externas não são esperadas.  
+Porém, **feedbacks são bem-vindos**! Se quiser sugerir melhorias ou adicionar anotações, sinta-se à vontade.
+
+---
+
+## 📜 Licença
+
+Este repositório não possui uma licença específica.  
+Todos os conteúdos foram desenvolvidos **para uso acadêmico e aprendizado**.
+
+---
+
+## 📬 Contato
+
+Para dúvidas sobre algum exercício ou sugestão de melhoria, entre em contato com o autor do repositório.
