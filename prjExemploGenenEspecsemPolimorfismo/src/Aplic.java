@@ -4,7 +4,7 @@ import fatec.poo.model.Professor;
 
 
 /**
- * @author 0030482411017
+ * Vandinho 0030482411017
  */
 
 public class Aplic {
@@ -34,4 +34,5 @@ public class Aplic {
     }
     
 }
+
 
