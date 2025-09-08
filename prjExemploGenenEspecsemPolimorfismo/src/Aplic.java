@@ -20,6 +20,8 @@ public class Aplic {
         System.out.println("Data de Nascimento: " + objAlu.getDataNascimento());
         System.out.println("Mensalidade: " + objAlu.getMensalidade());
 
+        objProf.setSalario(30000);
+        
         System.out.println("\nRegistro funcional: " + objProf.getRegFuncional());
         System.out.println("Nome: " + objProf.getNome());
         System.out.println("Data de Nascimento: " + objProf.getDataNascimento());
@@ -32,3 +34,4 @@ public class Aplic {
     }
     
 }
+
