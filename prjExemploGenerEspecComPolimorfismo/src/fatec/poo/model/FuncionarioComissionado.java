@@ -35,7 +35,7 @@ public class FuncionarioComissionado extends Funcionario {
     }
 
     public double calcSalBruto() {
-        return (salBase + taxaComissao * totalVendas);
+        return (salBase + (taxaComissao/100) * totalVendas);
     }
 
     public double calcGratificacao() {
@@ -54,3 +54,4 @@ public class FuncionarioComissionado extends Funcionario {
         return (calcSalBruto() - calcDesconto() + calcGratificacao());
     }
 }
+
