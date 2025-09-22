@@ -1,4 +1,4 @@
-
+import fatec.poo.model.FuncionarioComissionado;
 import fatec.poo.model.FuncionarioHorista;
 import fatec.poo.model.FuncionarioMensalista;
 
@@ -62,4 +62,5 @@ public class Aplic {
     }
 
 }
+
 
