@@ -1,6 +1,8 @@
+
 import fatec.poo.model.FuncionarioComissionado;
 import fatec.poo.model.FuncionarioHorista;
 import fatec.poo.model.FuncionarioMensalista;
+import java.text.DecimalFormat;
 
 /**
  * @author Vandinho
@@ -8,6 +10,7 @@ import fatec.poo.model.FuncionarioMensalista;
 public class Aplic {
 
     public static void main(String[] args) {
+        DecimalFormat df = new DecimalFormat("#,##0.00");
         FuncionarioHorista funcHor = new FuncionarioHorista(1010,
                                                             "Pedro Silveira",
                                                             "14/05/1978",
@@ -19,10 +22,10 @@ public class Aplic {
         System.out.println("Cargo            => " + funcHor.getCargo());
         System.out.println("Registro         => " + funcHor.getRegistro());
         System.out.println("Data de admissão => " + funcHor.getDtAdmissao());
-        System.out.println("Salário Bruto    => " + funcHor.calcSalBruto());
-        System.out.println("Desconto         => " + funcHor.calcDesconto());
-        System.out.println("Gratificação     => " + funcHor.calcGratificacao());
-        System.out.println("Salário Liquido  => " + funcHor.calcSalLiquido());
+        System.out.println("Salário Bruto    => " + df.format(funcHor.calcSalBruto()));
+        System.out.println("Desconto         => " + df.format(funcHor.calcDesconto()));
+        System.out.println("Gratificação     => " + df.format(funcHor.calcGratificacao()));
+        System.out.println("Salário Liquido  => " + df.format(funcHor.calcSalLiquido()));
         
 
         FuncionarioMensalista funcMen = new FuncionarioMensalista(2020,
@@ -36,9 +39,9 @@ public class Aplic {
         System.out.println("Cargo            => " + funcMen.getCargo());
         System.out.println("Registro         => " + funcMen.getRegistro());
         System.out.println("Data de admissão => " + funcMen.getDtAdmissao());
-        System.out.println("Salário Bruto    => " + funcMen.calcSalBruto());
-        System.out.println("Desconto         => " + funcMen.calcDesconto());
-        System.out.println("Salário Líquido  => " + funcMen.calcSalLiquido());
+        System.out.println("Salário Bruto    => " + df.format(funcMen.calcSalBruto()));
+        System.out.println("Desconto         => " + df.format(funcMen.calcDesconto()));
+        System.out.println("Salário Líquido  => " + df.format(funcMen.calcSalLiquido()));
 
         
         FuncionarioComissionado funcCom = new FuncionarioComissionado(3030,
@@ -47,22 +50,20 @@ public class Aplic {
                                                                        10);
         funcCom.setCargo("Estagiario em Engenharia de Prompt");
         
+        funcCom.addVendas(1000.0);
+        funcCom.addVendas(4000.0);
         funcCom.addVendas(3000.0);
-        funcCom.addVendas(5000.0);
-        funcCom.addVendas(1100.0);
         funcCom.setSalBase(900.0);
         System.out.println("\n\nNome             => " + funcCom.getNome());
         System.out.println("Cargo            => " + funcCom.getCargo());
         System.out.println("Registro         => " + funcCom.getRegistro());
         System.out.println("Data de admissão => " + funcCom.getDtAdmissao());
-        System.out.println("Salário Bruto    => " + funcCom.calcSalBruto());
-        System.out.println("Desconto         => " + funcCom.calcDesconto());
-        System.out.println("Gratificação     => " + funcCom.calcGratificacao());
-        System.out.println("Salário Líquido  => " + funcCom.calcSalLiquido());
+        System.out.println("Salário Bruto    => " + df.format(funcCom.calcSalBruto()));
+        System.out.println("Desconto         => " + df.format(funcCom.calcDesconto()));
+        System.out.println("Gratificação     => " + df.format(funcCom.calcGratificacao()));
+        System.out.println("Salário Líquido  => " + df.format(funcCom.calcSalLiquido()));
         
     }
 
 }
-
-
 
