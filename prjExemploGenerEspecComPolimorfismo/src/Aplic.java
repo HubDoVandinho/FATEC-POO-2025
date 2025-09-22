@@ -44,23 +44,25 @@ public class Aplic {
         FuncionarioComissionado funcCom = new FuncionarioComissionado(3030,
                                                                       "Matheus Portes",
                                                                       "11/07/2005",
-                                                                       0.15);
+                                                                       10);
         funcCom.setCargo("Estagiario em Engenharia de Prompt");
         
-        funcCom.addVendas(1500.0);
-        funcCom.addVendas(750.5);
-        funcCom.addVendas(50.0);
-        funcCom.setSalBase(850.0);
+        funcCom.addVendas(3000.0);
+        funcCom.addVendas(5000.0);
+        funcCom.addVendas(1100.0);
+        funcCom.setSalBase(900.0);
         System.out.println("\n\nNome             => " + funcCom.getNome());
         System.out.println("Cargo            => " + funcCom.getCargo());
         System.out.println("Registro         => " + funcCom.getRegistro());
         System.out.println("Data de admissão => " + funcCom.getDtAdmissao());
         System.out.println("Salário Bruto    => " + funcCom.calcSalBruto());
         System.out.println("Desconto         => " + funcCom.calcDesconto());
+        System.out.println("Gratificação     => " + funcCom.calcGratificacao());
         System.out.println("Salário Líquido  => " + funcCom.calcSalLiquido());
         
     }
 
 }
+
 
 
