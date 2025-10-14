@@ -9,6 +9,15 @@ abstract public class Funcionario {
     private String nome;
     private String dtAdmissao;  
     private String cargo;
+    private Departamento departamento;
+
+    public Departamento getDepartamento() {
+        return departamento;
+    }
+
+    public void setDepartamento(Departamento departamento) {
+        this.departamento = departamento;
+    }
     
     public Funcionario(int r, String n, String dtAdm){
         registro = r;
@@ -41,3 +50,4 @@ abstract public class Funcionario {
         return(calcSalBruto() - calcDesconto());
     }
 }
+
