@@ -1,4 +1,5 @@
 
+import fatec.poo.model.Departamento;
 import fatec.poo.model.FuncionarioComissionado;
 import fatec.poo.model.FuncionarioHorista;
 import fatec.poo.model.FuncionarioMensalista;
@@ -22,6 +23,8 @@ public class Aplic {
                                                                       "Joao Mendes",
                                                                       "10/12/1975",
                                                                       10);
+        Departamento dep1 = new Departamento("CP", "Compras");
+        Departamento dep2 = new Departamento("VD", "Vendas");
         
         funcHor.setCargo("Programador");
         funcMen.setCargo("Aux. Administrativo");
@@ -29,18 +32,39 @@ public class Aplic {
      
         //Estabelece a associação entre um objeto da classse FuncionárioHorista
         //com um objeto da classe Departamento
+        
+        funcHor.setDepartamento(dep1);
+        System.out.println("O funcionario(a) horista " + funcHor.getNome() + 
+                           " trabalha no departamento: " + funcHor.getDepartamento().getNome());
     
         //Estabelece a associação entre um objeto da classse FuncionárioMensalista
         //com um objeto da classe Departamento
-    
+        
+        funcMen.setDepartamento(dep1);
+        System.out.println("\nO funcionario(a) mensalista " + funcMen.getNome() + 
+                           " trabalha no departamento: " + funcMen.getDepartamento().getNome());
+        
         //Estabelece a associação entre um objeto da classse FuncionárioComissionado
         //com um objeto da classe Departamento
+        
+        funcCom.setDepartamento(dep2);
+        System.out.println("\nO funcionario(a) comissionado " + funcCom.getNome() + 
+                           " trabalha no departamento: " + funcCom.getDepartamento().getNome());
     
         //Estabelece a associação entre um objeto da classe Departamento com
         //um objeto das classes FuncionarioHorista e FuncionarioMensalista
+        
+        dep1.addFuncionario(funcHor);
+        dep1.addFuncionario(funcMen);
     
         //Estabelece a associação entre um objeto da classe Departamento com
         //um objeto da classe FuncionarioComissionado
+        
+        dep2.addFuncionario(funcCom);
+        
+        dep1.listarFuncionarios();
+        dep2.listarFuncionarios();
+        
     
     }    
 }
