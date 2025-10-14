@@ -13,6 +13,8 @@ public class Departamento {
     public Departamento(String s, String n){
         sigla = s;
         nome = n;
+        funcionarios = new Funcionario[5];
+        numFunc = 0;
     }
     
     public String getSigla(){
@@ -23,12 +25,24 @@ public class Departamento {
         return nome;
     }
 
-    public void addFuncionarios(Funcionario[] funcionarios) {
-        this.funcionarios = funcionarios;
+    public void addFuncionario(Funcionario f) {
+        funcionarios[numFunc] = f;
+        numFunc++;
     }
 
-    public Funcionario[] listaFuncionarios() {
-        return funcionarios;
+    public void listarFuncionarios() {
+        
+        System.out.println("\n\nSigla: " + sigla);
+        System.out.println("Nome: " + nome);
+        System.out.println("Qtde. funcionarios: " + numFunc);
+        System.out.println("\nRegistro\t\tNome\t\tCargo");
+        
+        for(int x = 0; x < numFunc; x++){
+            System.out.print(funcionarios[x].getRegistro() + "\t\t");
+            System.out.print(funcionarios[x].getNome() + "\t\t");
+            System.out.println(funcionarios[x].getCargo());
+        }
+        
     }
      
 }
