@@ -32,7 +32,7 @@ public class Departamento {
 
     public void listarFuncionarios() {
         
-        System.out.println("\n\nSigla: " + sigla);
+        System.out.println("\nSigla: " + sigla);
         System.out.println("Nome: " + nome);
         System.out.println("Qtde. funcionarios: " + numFunc);
         System.out.println("\nRegistro\t\tNome\t\tCargo");

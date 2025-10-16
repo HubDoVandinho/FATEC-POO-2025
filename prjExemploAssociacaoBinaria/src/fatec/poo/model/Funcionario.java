@@ -10,6 +10,7 @@ abstract public class Funcionario {
     private String dtAdmissao;  
     private String cargo;
     private Departamento departamento;
+    private Projeto projeto;
 
     public Departamento getDepartamento() {
         return departamento;
@@ -17,6 +18,14 @@ abstract public class Funcionario {
 
     public void setDepartamento(Departamento departamento) {
         this.departamento = departamento;
+    }
+
+    public Projeto getProjeto() {
+        return projeto;
+    }
+
+    public void setProjeto(Projeto projeto) {
+        this.projeto = projeto;
     }
     
     public Funcionario(int r, String n, String dtAdm){
