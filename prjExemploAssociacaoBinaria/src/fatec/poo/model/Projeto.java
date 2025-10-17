@@ -50,15 +50,18 @@ public class Projeto {
     
     public void listarFuncionarios() {
         
-        System.out.println("\nCodigo do projeto: " + codigo);
-        System.out.println("Descricao do projeto: " + descricao);
+        System.out.println("\nCodigo: " + codigo);
+        System.out.println("Descricao: " + descricao);
+        System.out.println("Data Início: " + dtInicio);
+        System.out.println("Data Término: " + dtTermino);
         System.out.println("Qtde. funcionarios: " + numFunc);
-        System.out.println("\nRegistro\t\tNome\t\tCargo");
+        System.out.println("\nRegistro\tNome\t\t\tCargo\t\t\tDepartamento");
         
         for(int x = 0; x < numFunc; x++){
             System.out.print(funcionarios[x].getRegistro() + "\t\t");
             System.out.print(funcionarios[x].getNome() + "\t\t");
-            System.out.println(funcionarios[x].getCargo());
+            System.out.print(funcionarios[x].getCargo() + "\t\t");
+            System.out.println(funcionarios[x].getDepartamento().getNome());
         }
         
     }
