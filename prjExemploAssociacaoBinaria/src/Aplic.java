@@ -59,7 +59,11 @@ public class Aplic {
         dep2.listarFuncionarios();
         
         Projeto proj1 = new Projeto(123, "(Insert description here)");
+        proj1.setDtInicio("02/02/1996");
+        proj1.setDtTermino("23/12/2001");
         Projeto proj2 = new Projeto(456, "(Insert description here)");
+        proj2.setDtInicio("14/10/2004");
+        proj2.setDtTermino("19/10/2006");
         
         funcHor.setProjeto(proj1);
         funcMen.setProjeto(proj2);
@@ -75,16 +79,7 @@ public class Aplic {
         System.out.println("\n---------------------------------------------------------------------------");
         proj2.listarFuncionarios();
         
-        
         System.out.println("\n---------------------------------------------------------------------------\n");
         
-        
-        
-        
-
-                
-                
-        
-    
     }    
 }
