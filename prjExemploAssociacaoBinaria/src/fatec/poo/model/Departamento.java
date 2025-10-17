@@ -35,7 +35,7 @@ public class Departamento {
         System.out.println("\nSigla: " + sigla);
         System.out.println("Nome: " + nome);
         System.out.println("Qtde. funcionarios: " + numFunc);
-        System.out.println("\nRegistro\t\tNome\t\tCargo");
+        System.out.println("\nRegistro\tNome\t\t\tCargo");
         
         for(int x = 0; x < numFunc; x++){
             System.out.print(funcionarios[x].getRegistro() + "\t\t");
