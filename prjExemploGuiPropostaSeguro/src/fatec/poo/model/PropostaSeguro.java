@@ -13,6 +13,14 @@ public class PropostaSeguro {
     private boolean perfilMotorista;
     private boolean perfilCidade;
 
+    public double getValorBase() {
+        return valorBase;
+    }
+
+    public int getFaixaIdade() {
+        return faixaIdade;
+    }
+
     public PropostaSeguro(String nome, double valorCarro) {
         this.nome = nome;
         this.valorCarro = valorCarro;
