@@ -12,7 +12,8 @@ public class GuiPropostaSeguro extends javax.swing.JFrame {
 
     public GuiPropostaSeguro() {
         initComponents();
-
+        btnLimpar.setEnabled(false);
+        btnCalcular.setEnabled(false);
     }
 
     @SuppressWarnings("unchecked")
@@ -511,8 +512,7 @@ public class GuiPropostaSeguro extends javax.swing.JFrame {
     private void btnLimparActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLimparActionPerformed
         txtNome.setText("");
         txtValorCarro.setText("");
-        rdbFem.setSelected(false);
-        rdbMasc.setSelected(false);
+        rdbMasc.setSelected(true);
         cbxFaixaIdade.setSelectedIndex(0);
         chkDirigeSomenteNaCidade.setSelected(false);
         chkUnicoMotorista.setSelected(false);
@@ -523,8 +523,13 @@ public class GuiPropostaSeguro extends javax.swing.JFrame {
         lblDescontoPerfil.setText("");
         lblValorFinalDoSeguro.setText("");
         
+        txtNome.requestFocus();
+        
+        btnLimpar.setEnabled(false);
         btnMontar.setEnabled(true);
         btnCalcular.setEnabled(false);
+        
+        
         
     }//GEN-LAST:event_btnLimparActionPerformed
 
@@ -542,55 +547,24 @@ public class GuiPropostaSeguro extends javax.swing.JFrame {
         }
         
         objPropSeg.setPerfilMotorista(chkUnicoMotorista.isSelected());
-        objPropSeg.setPerfilMotorista(chkDirigeSomenteNaCidade.isSelected());
+        objPropSeg.setPerfilCidade(chkDirigeSomenteNaCidade.isSelected());
         objPropSeg.setFaixaIdade(cbxFaixaIdade.getSelectedIndex());
         
         btnMontar.setEnabled(false);
         btnCalcular.setEnabled(true);
+        btnLimpar.setEnabled(true);
     }//GEN-LAST:event_btnMontarActionPerformed
 
     private void btnCalcularActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCalcularActionPerformed
+        DecimalFormat df = new DecimalFormat("R$#,##0.00");
+        
         lblValorBaseDoSeguro.setText(df.format(objPropSeg.getValorBase()));
         lblDescontoSexo.setText(df.format(objPropSeg.calcDescSexo()));
         lblDescontoIdade.setText(df.format(objPropSeg.calcDescIdade()));
-        lblDescontoPerfil.setText(df.format(objPropSeg.calcDescPerfilCidade() + objPropSeg.calcDescPerfilMotorista()));
+        lblDescontoPerfil.setText(df.format(objPropSeg.calcDescPerfilCidade() + 
+                                            objPropSeg.calcDescPerfilMotorista()));
         lblValorFinalDoSeguro.setText(df.format(objPropSeg.calcSeguro()));
     }//GEN-LAST:event_btnCalcularActionPerformed
-
-    public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(GuiPropostaSeguro.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(GuiPropostaSeguro.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(GuiPropostaSeguro.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(GuiPropostaSeguro.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
-
-        /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new GuiPropostaSeguro().setVisible(true);
-                
-            }
-        });
-
-
-    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnCalcular;
@@ -632,6 +606,4 @@ public class GuiPropostaSeguro extends javax.swing.JFrame {
     private javax.swing.JTextField txtValorCarro;
     // End of variables declaration//GEN-END:variables
     private PropostaSeguro objPropSeg;
-    DecimalFormat df = new DecimalFormat("R$#,##0.00");
-
 }
